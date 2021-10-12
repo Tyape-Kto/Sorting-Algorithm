@@ -1,5 +1,5 @@
 from random import randint
-
+### This sorting algorithm sorts from backwards [Picchadi bate mildai aauxa]
 def Bubble(arr):
   for j in range(len(arr)):
     for i in range(len(arr)-j-1):
