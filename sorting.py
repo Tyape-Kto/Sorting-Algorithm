@@ -7,5 +7,12 @@ def Bubble(arr):
         arr[i], arr[i+1] = arr[i+1], arr[i]
   return arr
 
+def Insertion(arr):
+  for i in range(len(arr)):
+    for j in range(i+1, len(arr)):
+      if arr[i] > arr[j]:
+        arr[i], arr[j] = arr[j], arr[i]
+  return arr
+
+
 l = [randint(1,20) for _ in range(10)]
-Bubble(l)
