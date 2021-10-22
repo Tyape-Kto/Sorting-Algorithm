@@ -20,5 +20,25 @@ def Insertion(arr):
         arr[i], arr[j] = arr[j], arr[i]
   return arr
 
+def toMerge(left, right):
+  sorted_list = []
+  i, j = 0, 0
+  while j < len(right) and i < len(left):
+    if left[i] > right[j]:
+      sorted_list.append(right[j])
+      j += 1
+    else:
+      sorted_list.append(left[i])
+      i += 1
+  if len(sorted_list) < len(left) + len(right):
+    if right[-1] > left[-1]:
+      sorted_list.append(right[-1])
+    else:
+      sorted_list.append(left[-1])
+  return sorted_list
+
+def Merge(arr):
+  
+
 
 l = [randint(1,20) for _ in range(10)]
