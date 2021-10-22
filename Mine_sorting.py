@@ -20,7 +20,8 @@ def Insertion(arr):
         arr[i], arr[j] = arr[j], arr[i]
   return arr
 
-def toMerge(left, right):
+"""
+def merge(left, right):
   sorted_list = []
   i, j = 0, 0
   while j < len(right) and i < len(left):
@@ -36,9 +37,24 @@ def toMerge(left, right):
     else:
       sorted_list.append(left[-1])
   return sorted_list
-
-def Merge(arr):
   
+### this is as far as i can go i couldn't make merge_sort work, this is all i got
 
-
+def merge_sort(arr): 
+  print("merge_sort of:", arr)
+  if len(arr) > 1:
+    middle = len(arr) // 2
+    left = arr[:middle]
+    right = arr[middle:]
+    sorted_list = []
+    if len(left) >= 1:
+      l = merge_sort(left)
+      print("l after returned", l)
+    if len(right) >= 1:
+      r = merge_sort(right)
+    if l == None and r == None:
+      l, r = left, right
+    print('l and r ho, ',l, r)
+    return merge(left, right)
+ """
 l = [randint(1,20) for _ in range(10)]
