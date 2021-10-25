@@ -86,7 +86,6 @@ def merge_sort(arr): ### version 3
     middle = len(arr) // 2
     left = arr[:middle]
     right = arr[middle:]
-    print("left", left, "right", right)
     l = merge_sort(left)
     r = merge_sort(right)
     return merge(l, r)
