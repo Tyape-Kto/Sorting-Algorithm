@@ -56,5 +56,25 @@ def merge_sort(arr):
       l, r = left, right
     print('l and r ho, ',l, r)
     return merge(left, right)
+    
+def merge_sort(arr):
+  print("merging Started")
+  middle = len(arr) // 2
+  left = arr[:middle]
+  right = arr[middle:]
+  print("left",left,"right", right)
+  if len(left) == 1:
+    print('returned', left)
+    return left
+  if len(right) == 1:
+    print('returned', right)
+    return right
+  print("left recursion")
+  l = merge_sort(left)
+  print("right recursion")
+  r = merge_sort(right)
+  sorted_list = merge(left, right)
+  print('returning', sorted_list)
+  return sorted_list
  """
 l = [randint(1,20) for _ in range(10)]
