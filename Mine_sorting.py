@@ -40,7 +40,7 @@ def merge(left, right):
   
 ### this is as far as i can go i couldn't make merge_sort work, this is all i got
 
-def merge_sort(arr): 
+def merge_sort(arr):  ### version 1
   print("merge_sort of:", arr)
   if len(arr) > 1:
     middle = len(arr) // 2
@@ -57,7 +57,7 @@ def merge_sort(arr):
     print('l and r ho, ',l, r)
     return merge(left, right)
     
-def merge_sort(arr):
+def merge_sort(arr): ### version 2
   print("merging Started")
   middle = len(arr) // 2
   left = arr[:middle]
@@ -76,5 +76,19 @@ def merge_sort(arr):
   sorted_list = merge(left, right)
   print('returning', sorted_list)
   return sorted_list
+  
+  
+
+def merge_sort(arr): ### version 3
+  if len(arr) < 2:
+    return arr[:]
+  else:
+    middle = len(arr) // 2
+    left = arr[:middle]
+    right = arr[middle:]
+    print("left", left, "right", right)
+    l = merge_sort(left)
+    r = merge_sort(right)
+    return merge(l, r)
  """
 l = [randint(1,20) for _ in range(10)]
