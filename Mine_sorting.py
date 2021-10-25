@@ -22,6 +22,7 @@ def Insertion(arr):
 
 """
 def merge(left, right):
+### at [0],[11,13] it has flaw
   sorted_list = []
   i, j = 0, 0
   while j < len(right) and i < len(left):
@@ -36,6 +37,30 @@ def merge(left, right):
       sorted_list.append(right[-1])
     else:
       sorted_list.append(left[-1])
+  return sorted_list
+  
+  ### another one , at this que it has flaw , [8, 9, 13, 20, 20] [0, 2, 3, 4, 20]
+  i, j = 0, 0
+  sorted_list = []
+  while i < len(left) and j < len(right):
+    if left[i] < right[j]:
+      sorted_list.append(left[i])
+      i += 1
+    else:
+      sorted_list.append(right[j])
+      j += 1
+  total = len(right) + len(left)
+  if (total - len(sorted_list)) > 1:
+    less = total - len(sorted_list)
+    if len(left) > len(right):
+      sorted_list.extend(left[-less:])
+    else:
+      sorted_list.extend(right[-less:])
+  else:  
+    if left[-1] > right[-1]:
+      sorted_list.append(left[-1])
+    else:
+      sorted_list.append(right[-1])
   return sorted_list
   
 ### this is as far as i can go i couldn't make merge_sort work, this is all i got
