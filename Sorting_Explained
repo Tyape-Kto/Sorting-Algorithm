@@ -4,5 +4,6 @@
   2. Split left half list again until left with single item (base case), return it
   3. When left with one left and right, merge both by checking
   4. Move to right list (3 items), split it , return base case, merge it and work your way back up like that
+  5. When you work with recursion then try to think of base case which makes you exit infinite loop fucker.
 
 ###[  a  ]###
