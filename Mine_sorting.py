@@ -30,7 +30,6 @@ def merge_sort(arr):
     middle = len(arr) // 2
     l = merge_sort(arr[:middle])
     r = merge_sort(arr[middle:])
-    print(l,r)
     return merge(l, r)
 
 def merge(left, right):
@@ -50,7 +49,6 @@ def merge(left, right):
     else:
       sorted_list.append(right[-1])  
   else:  
-    print('is this running')
     less = total - len(sorted_list)
     if len(left) > len(right):
       sorted_list.extend(left[-less:])
