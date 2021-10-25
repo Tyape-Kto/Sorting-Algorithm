@@ -28,8 +28,8 @@ def Merge(arr):
     return arr[:]
   else:
     middle = len(arr) // 2
-    l = merge_sort(arr[:middle])
-    r = merge_sort(arr[middle:])
+    l = Merge(arr[:middle])
+    r = Merge(arr[middle:])
     return merge(l, r)
 
 def merge(left, right):
