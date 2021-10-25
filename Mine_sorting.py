@@ -23,7 +23,7 @@ def Insertion(arr):
 
 
 def merge_sort(arr):
-  ### this sorting works but it isn't perfect.
+  ### this sorting works but it isn't perfect., [13, 16, 7, 19, 6, 7, 16, 5, 5, 3], shit
   if len(arr) < 2:
     return arr[:]
   else:
