@@ -9,6 +9,16 @@ def bubble_sort(arr):
         swap_happened = True
   return arr
 
+
+def merge_sort(arr):
+  if len(arr) < 2:
+    return arr[:]
+  else:
+    middle = len(arr) // 2
+    l = merge_sort(arr[:middle])
+    r = merge_sort(arr[middle:])
+    return merge(l, r)
+
 def merge(left, right):
   sorted_list = []
   i, j = 0, 0
@@ -27,11 +37,5 @@ def merge(left, right):
     j += 1
   return sorted_list
 
-def merge_sort(arr):
-  if len(arr) < 2:
-    return arr[:]
-  else:
-    middle = len(arr) // 2
-    l = merge_sort(arr[:middle])
-    r = merge_sort(arr[middle:])
-    return merge(l, r)
+def quick_sort(arr):
+  pass
