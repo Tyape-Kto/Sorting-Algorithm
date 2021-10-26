@@ -58,5 +58,9 @@ def merge(left, right):
     
   return sorted_list
 
+def quick_sort(arr):
+  print("I couldn't make this function work on my own, i am pathetic.")
+  
+
 
 l = [randint(1,20) for _ in range(10)]
