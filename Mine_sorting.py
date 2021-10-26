@@ -33,6 +33,7 @@ def Merge(arr):
     return merge(l, r)
 
 def merge(left, right):
+  ### this function is broken, filled with bugs
   i, j = 0, 0
   sorted_list = []
   while i < len(left) and j < len(right):
