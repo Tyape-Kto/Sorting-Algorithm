@@ -1,3 +1,4 @@
+'''
 def merge(left, right):
   ### at [0],[11,13] it has flaw
   sorted_list = []
@@ -78,9 +79,6 @@ def merge_sort(arr): ### version 2
   sorted_list = merge(left, right)
   print('returning', sorted_list)
   return sorted_list
-  
-  
-
 def merge_sort(arr): ### version 3
   if len(arr) < 2:
     return arr[:]
@@ -91,3 +89,46 @@ def merge_sort(arr): ### version 3
     l = merge_sort(left)
     r = merge_sort(right)
     return merge(l, r)
+'''
+  
+  '''
+  def quick_sort(arr):
+  if len(arr) < 2:
+    print('returned', arr)
+    return arr[:]
+  middle = arr[-1:]
+  left = []
+  right = []
+  for i in arr[:-1]:
+    if i > middle[0]:
+      right.append(i)
+    else:
+      left.append(i)
+  print(left, middle, right)
+  print('left recursion')
+  l = quick_sort(left)
+  print('right recursion')
+  r = quick_sort(right)
+  if l:
+    return l.extend(r)
+  else:
+    return []
+def quick_sort_two():
+  if len(arr) < 2:
+    print('returned',arr[:])
+    return arr[:]
+  middle = arr[-1]
+  left = []
+  right = []
+  for i in range(len(arr)):
+    if middle > arr[i]:
+      left.append(arr[i])
+    else:
+      right.append(arr[i])
+  print(left, right)
+  if len(left) < len(right):
+    l = quick_sort(left)
+  else:
+    r = quick_sort(right)
+  print(left, right)
+'''
