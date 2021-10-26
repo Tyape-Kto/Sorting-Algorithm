@@ -8,7 +8,7 @@
 
 ###[  Quick_sort  ]### FanFav
   Uses :- Divide and Conquer
-  1. First find a pivot point(eg:last element), then place every small in left and every element larger place in right
+  1. First find a pivot point(eg:last element), then place every small in left and every element larger place in right, if same then put it in middle
   2. Forget about big part and do same with smaller left/ right part
   3. Return if only one element 
   4. Join 
